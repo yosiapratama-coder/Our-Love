@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffedf3">
+<title>Untuk Ayang 💗 — dari Yoss</title>
+<style>
+:root{--pink:#ff5f97;--deep:#8e2852;--cream:#fff8fb;--ink:#452536}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at top left,#ffe0eb,transparent 38%),linear-gradient(135deg,#fff8fb,#ffeef5);overflow-x:hidden}
+button,input{font:inherit}button{cursor:pointer;border:0;border-radius:999px;padding:12px 18px;font-weight:750;transition:transform .18s,filter .18s}button:hover{transform:translateY(-2px);filter:brightness(1.02)}button:focus-visible{outline:3px solid #7a2850;outline-offset:3px}
+.wrap{max-width:920px;margin:auto;padding:24px 16px 70px}.hero{text-align:center;padding:54px 18px 36px}.pill{display:inline-block;padding:7px 13px;border:1px solid #ffc0d5;border-radius:99px;background:#ffffffa8;font-size:.85rem;color:var(--deep)}h1{font-size:clamp(2.3rem,8vw,4.5rem);line-height:1.03;margin:18px 0;color:#b62d65;letter-spacing:-.05em}.hero p{max-width:610px;margin:0 auto 22px;font-size:1.08rem;line-height:1.7}.primary{background:linear-gradient(135deg,#ff5793,#e6337a);color:white;box-shadow:0 9px 25px #f65a9238}.soft{background:#fff;color:#b62d65;border:1px solid #ffc4d8}.section{background:#ffffffd9;border:1px solid #ffe0eb;border-radius:26px;padding:24px;margin:18px 0;box-shadow:0 12px 35px #9b31520b}.section h2{margin:0 0 8px;color:#a52d60}.muted{color:#8b6878;font-size:.94rem;line-height:1.6}.riddle{padding:16px 0;border-top:1px solid #f7dce6}.riddle:first-of-type{border-top:0}.answers{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}.answers button{background:#fff0f6;color:#9d2e5b;border:1px solid #ffd1e1}.feedback{min-height:26px;color:#bd2e68;font-weight:700;margin-top:9px}.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:15px}.choice{background:#fff1f7;border:1px solid #ffd3e2;border-radius:18px;padding:17px 12px;color:#9c2c5a;text-align:center;min-height:86px}.choice.selected{background:#ff5f97;color:white;border-color:#ff5f97}.picked{padding:14px;background:#fff8fb;border-radius:16px;margin-top:12px;line-height:1.6}.letter{line-height:1.9;font-size:1rem;white-space:pre-line}.signature{text-align:right;color:#b62d65;font-weight:800;margin-top:22px}.footer{text-align:center;color:#a17b8c;padding:20px;font-size:.9rem}
+#cameraStage{display:none;position:fixed;inset:0;background:#000;color:white;z-index:9999;align-items:center;justify-content:center;padding:18px;text-align:center;overflow:auto}
+#cameraStage.show{display:flex}.camera-inner{width:min(100%,650px)}.camera-top{font-weight:800;font-size:clamp(1.2rem,5vw,2rem);margin:8px 0 15px}.camera-note{color:#e8dce2;font-size:.92rem;line-height:1.5;max-width:500px;margin:0 auto 15px}.video-frame{display:none;position:relative;width:100%;background:#151515;border-radius:22px;overflow:hidden;aspect-ratio:3/4;max-height:58vh;margin:0 auto 15px}.video-frame video,.video-frame img{width:100%;height:100%;object-fit:cover}.cam-buttons{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.cam-buttons button{min-width:130px}.white{background:white;color:#9d2e5b}.pink{background:#ff5f97;color:white}.dark{background:#272027;color:white;border:1px solid #51434c}.result-title{font-size:clamp(2rem,8vw,3.3rem);color:#ff8bb5;font-weight:900;line-height:1.1;margin:18px 0 10px}.result-copy{font-size:1.05rem;line-height:1.8;max-width:560px;margin:0 auto 20px;color:#fff2f7}.small{font-size:.8rem;color:#c5b5bd;margin-top:15px}
+.heart{position:fixed;bottom:-30px;z-index:-1;opacity:.32;animation:float 10s linear infinite;font-size:22px}@keyframes float{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+@media(max-width:560px){.section{padding:19px}.choices{gap:8px}.choice{font-size:.94rem}.hero{padding-top:38px}.cam-buttons button{flex:1}.wrap{padding-inline:12px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <span class="pill">surat kecil dari Yoss 💌</span>
+    <h1>Hai, ayangku!<br>💗</h1>
+    <p>Ada sedikit hal yang pengin Yoss kasih buat ayang. Kerjain teka-tekinya, pilih yang paling ayang suka, lalu baca surat kecil dari seseorang yang sayang banget sama ayang.</p>
+    <button class="primary" onclick="document.querySelector('#teka').scrollIntoView({behavior:'smooth'})">Mulai, ayang ✨</button>
+  </header>
+
+  <section class="section" id="teka">
+    <h2>01 · Tiga teka-teki bucin 🧩</h2>
+    <p class="muted">Jawab santai aja, ayang. Ini bukan ujian—yang penting senyum dulu! 😚</p>
+    <div class="riddle">
+      <strong>1. Aku bukan kalender, tapi setiap hari aku ingin punya waktu sama ayang. Aku siapa?</strong>
+      <div class="answers"><button onclick="answer(1,false)">Jam dinding</button><button onclick="answer(1,true)">Yoss yang kangen</button><button onclick="answer(1,false)">Tukang parkir</button></div>
+      <div class="feedback" id="f1" aria-live="polite"></div>
+    </div>
+    <div class="riddle">
+      <strong>2. Apa yang makin dibagi ke ayang malah makin banyak?</strong>
+      <div class="answers"><button onclick="answer(2,false)">Tagihan</button><button onclick="answer(2,true)">Kasih sayang</button><button onclick="answer(2,false)">Pekerjaan rumah</button></div>
+      <div class="feedback" id="f2" aria-live="polite"></div>
+    </div>
+    <div class="riddle">
+      <strong>3. Kalau ayang senyum, apa yang langsung ikut cerah meski cuaca mendung?</strong>
+      <div class="answers"><button onclick="answer(3,true)">Hari Yoss</button><button onclick="answer(3,false)">Lampu tetangga</button><button onclick="answer(3,false)">Baterai HP</button></div>
+      <div class="feedback" id="f3" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="section" id="pilihan">
+    <h2>02 · Ini atau itu? 💞</h2>
+    <p class="muted">Pilih satu di tiap pasangan. Nggak ada jawaban salah—Yoss cuma mau tahu dunia kecil favorit ayang.</p>
+    <div id="choiceList"></div>
+    <div class="picked" id="choiceSummary" aria-live="polite">Pilihan ayang bakal muncul di sini 💗</div>
+  </section>
+
+  <section class="section" id="surat">
+    <h2>03 · Surat panjang untuk ayang 💌</h2>
+    <p class="muted">Baca pelan-pelan ya. Anggap aja Yoss lagi duduk di sebelah ayang, ngomong dari hati ke hati.</p>
+    <div class="letter">Hai, ayangku sayanggg. 💗
+
+Kalau ayang sekarang lagi baca ini, Yoss cuma mau minta satu hal: senyum dulu, ya. Nggak harus senyum lebar, nggak harus pura-pura bahagia kalau hari ayang ternyata lagi berat. Senyum kecil juga boleh. Bahkan kalau ayang lagi capek dan cuma bisa menghela napas panjang, itu juga nggak apa-apa. Yoss pengin ayang tahu kalau di dunia yang kadang ramai, melelahkan, dan bikin kepala penuh ini, ada seseorang yang pengin ayang merasa disayang dengan sederhana tapi sungguh-sungguh.
+
+Ayang, mungkin Yoss nggak selalu pandai merangkai kata. Kadang Yoss bisa bingung harus ngomong apa, kadang cara Yoss menunjukkan perhatian juga belum tentu sempurna. Tapi satu hal yang Yoss harap ayang nggak ragukan: ayang itu berharga. Bukan cuma saat ayang lagi cantik, lagi ceria, lagi semangat, atau lagi punya banyak hal untuk diceritakan. Ayang tetap berharga saat rambut berantakan, saat wajah kelihatan lelah, saat mood berubah-ubah, saat ayang lagi diam, bahkan saat ayang sendiri merasa belum menjadi versi terbaik dari diri ayang.
+
+Yoss suka hal-hal kecil tentang ayang. Cara ayang bercerita tentang sesuatu yang ayang suka. Cara ayang tertawa sampai lupa sama hal yang tadi bikin kesal. Cara ayang bisa membuat obrolan biasa terasa spesial. Cara ayang punya pemikiran sendiri, punya mimpi sendiri, punya sisi lembut sekaligus kuat yang mungkin nggak semua orang bisa lihat. Dan bahkan hal-hal sederhana yang mungkin ayang anggap biasa, kadang justru jadi hal yang Yoss ingat diam-diam.
+
+Kalau suatu hari ayang merasa kurang cantik, semoga ayang ingat bahwa cantik itu bukan cuma soal wajah yang dilihat dari kamera atau pantulan cermin. Cantik juga ada di hati ayang yang masih berusaha baik meski lelah, di keberanian ayang untuk mencoba lagi, di kepedulian ayang kepada orang lain, dan di caranya ayang tetap melangkah meski hari nggak selalu mudah. Tapi kalau ayang tetap mau dengar Yoss bilang ayang cantik seribu kali, ya sudah: AYANG CANTIK BANGET. Serius. Cantik yang bikin Yoss pengin berhenti sebentar, melihat ayang, lalu bersyukur karena bisa mengenal seseorang seperti ayang. 🥹💗
+
+Yoss nggak mau menjanjikan bahwa setiap hari akan selalu mudah. Hidup tetap punya tugas, masalah, salah paham, rasa capek, dan hari-hari ketika semuanya terasa berjalan terlalu cepat. Tapi Yoss berharap, di antara semua itu, kita bisa belajar menjadi tempat yang aman satu sama lain. Tempat untuk bercerita tanpa takut ditertawakan, tempat untuk mengakui kalau sedang sedih, tempat untuk bilang “aku butuh waktu” tanpa dianggap nggak sayang, dan tempat untuk kembali bicara setelah sama-sama menenangkan diri.
+
+Kalau ayang lagi sedih, ayang nggak harus langsung kuat. Kalau ayang lagi takut, ayang nggak harus menyembunyikannya. Kalau ayang butuh waktu sendiri, bilang aja, ya. Yoss ingin belajar memahami ayang, bukan menebak-nebak lalu merasa paling benar. Yoss ingin mendengar apa yang ayang rasakan, bukan cuma menunggu giliran untuk menjawab. Yoss mungkin belum selalu bisa melakukan semuanya dengan tepat, tetapi Yoss mau terus belajar—pelan-pelan, dengan niat yang baik dan hati yang terbuka.
+
+Terima kasih karena sudah menjadi ayang dengan segala keunikan ayang. Terima kasih untuk waktu yang ayang berikan, untuk cerita-cerita kecil, untuk tawa, untuk perhatian, dan untuk setiap momen yang membuat hari biasa terasa punya kenangan. Terima kasih juga untuk hal-hal yang mungkin nggak ayang sadari sudah ayang ajarkan kepada Yoss: tentang sabar, tentang memahami orang lain, tentang menghargai hal kecil, dan tentang betapa berharganya kehadiran seseorang ketika kita benar-benar peduli kepadanya.
+
+Yoss berharap ayang nggak pernah merasa harus menjadi orang lain supaya pantas disayang. Ayang nggak perlu selalu menyenangkan semua orang. Ayang boleh punya batas, boleh berubah pikiran, boleh belajar, boleh gagal, boleh mencoba lagi, dan boleh punya mimpi yang besar. Yoss ingin melihat ayang tumbuh menjadi diri ayang yang paling jujur dan bahagia. Semoga ayang terus punya keberanian untuk mengejar apa yang ayang impikan, dan semoga ayang juga memberi diri ayang istirahat ketika memang membutuhkannya.
+
+Kalau suatu saat kita sedang berjauhan, semoga ayang tetap ingat bahwa perhatian nggak selalu harus hadir dalam hal besar. Kadang ia hadir lewat pesan sederhana, pertanyaan “udah makan belum?”, cerita receh yang nggak penting-penting amat, doa diam-diam, atau ucapan selamat tidur yang membuat hati terasa sedikit lebih tenang. Yoss ingin terus menemukan cara-cara kecil untuk mengingatkan ayang bahwa ayang dipikirkan, dihargai, dan disayangi.
+
+Dan kalau suatu saat kita berbeda pendapat, Yoss berharap kita tetap memilih untuk saling menghormati. Kita bukan dua orang yang harus selalu sepakat tentang semuanya. Kita dua manusia yang punya pengalaman, pikiran, dan perasaan masing-masing. Yang penting, semoga kita bisa belajar bicara tanpa sengaja melukai, mendengar tanpa buru-buru menghakimi, meminta maaf tanpa mencari alasan, dan memaafkan tanpa mengabaikan apa yang perlu diperbaiki. Buat Yoss, hubungan yang baik bukan hubungan yang nggak pernah punya masalah, melainkan hubungan yang mau menghadapi masalah dengan dewasa dan penuh kepedulian.
+
+Ayang, kalau hari ini belum ada yang bilang bahwa ayang sudah berusaha dengan baik, biar Yoss yang bilang: terima kasih sudah bertahan sampai hari ini. Terima kasih sudah melewati hal-hal yang mungkin nggak semua orang tahu. Yoss bangga pada ayang bukan hanya karena pencapaian yang bisa dilihat orang, tetapi juga karena usaha kecil yang ayang lakukan saat nggak ada yang memberi tepuk tangan. Jangan terlalu keras sama diri sendiri, ya. Ayang juga manusia yang berhak beristirahat, merasa, dan memulai kembali.
+
+Yoss nggak tahu semua hal yang akan terjadi nanti, tetapi Yoss tahu bahwa saat ini Yoss ingin menyayangi ayang dengan cara yang membuat ayang merasa dihormati, didengar, dan bebas menjadi diri sendiri. Bukan sekadar kata-kata manis, bukan sekadar janji yang terdengar indah, tetapi juga lewat tindakan sehari-hari. Semoga Yoss bisa semakin baik dalam menunjukkan perhatian, semakin sabar saat mendengarkan, semakin jujur saat berbicara, dan semakin bertanggung jawab atas apa yang Yoss lakukan.
+
+Jadi, ayangku, simpan surat ini untuk hari-hari ketika ayang butuh pengingat kecil. Baca lagi saat ayang kangen, saat ayang ingin senyum, atau saat ayang cuma ingin tahu bahwa ada seseorang yang sengaja meluangkan waktu untuk membuat ayang merasa spesial. Kalau hari ini terasa indah, semoga surat ini menambah manisnya. Kalau hari ini terasa berat, semoga surat ini menjadi pelukan kecil dari jauh.
+
+Terakhir, Yoss mau bilang: jangan lupa minum air, makan yang cukup, istirahat kalau lelah, dan jangan lupa menyayangi diri ayang sendiri. Jangan sampai ayang sibuk mengurus semuanya sampai lupa bahwa hati ayang juga perlu dirawat. Yoss ingin ayang bahagia bukan cuma ketika sedang bersama Yoss, tetapi juga saat ayang sedang menjalani hari ayang sendiri, mengejar mimpi ayang, tertawa bersama teman-teman, dan melakukan hal-hal yang ayang cintai.
+
+Ayang cantik, ayang manis, ayang lucu, ayang berharga—dan yang paling penting, ayang adalah ayang, seseorang yang nggak perlu menjadi sempurna untuk pantas menerima kasih sayang. Terima kasih sudah hadir di dunia ini dan menjadi bagian dari cerita Yoss. Kalau sekarang ayang tersenyum sedikit saja setelah membaca ini, berarti misi kecil Yoss berhasil. Kalau ayang malah terharu, sini Yoss kirim peluk virtual yang lamaaa. 🫂💗
+
+Sayang ayang banyak-banyak, lebih dari yang bisa Yoss rapikan menjadi kalimat di halaman ini. Semoga hari-hari ayang dipenuhi hal baik, semoga langkah ayang dimudahkan, semoga hati ayang selalu punya alasan untuk berharap, dan semoga ayang selalu ingat betapa berharganya diri ayang.
+
+Dengan penuh sayang,
+Yoss 💗</div>
+    <div class="signature">dibuat khusus buat ayang — Yoss ♡</div>
+  </section>
+
+  <section class="section" style="text-align:center">
+    <h2>04 · Ada satu kejutan lagi… 🎁</h2>
+    <p class="muted">Kalau ayang siap, tekan tombolnya. Layar akan berubah gelap dan browser akan meminta izin kamera. Kamera hanya aktif kalau ayang mengizinkannya.</p>
+    <button class="primary" onclick="startSurprise()">Buka kejutan terakhir 🖤</button>
+  </section>
+  <div class="footer">Dibuat dengan banyak cinta oleh Yoss · khusus untuk ayang 💗</div>
+</div>
+
+<div id="cameraStage" role="dialog" aria-modal="true" aria-label="Kejutan untuk ayang">
+  <div class="camera-inner">
+    <div class="camera-top" id="cameraTop">Ssst… ada kejutan buat ayang 🖤</div>
+    <p class="camera-note" id="cameraNote">Untuk mengambil foto, browser akan meminta izin kamera. Foto tidak dikirim atau diunggah otomatis. Ayang yang menentukan apakah ingin menyimpan atau membagikannya.</p>
+    <div class="video-frame" id="videoFrame"><video id="video" autoplay playsinline muted></video><img id="photo" alt="Foto ayang" style="display:none"></div>
+    <canvas id="canvas" style="display:none"></canvas>
+    <div class="cam-buttons" id="startButtons">
+      <button class="pink" onclick="openCamera()">Buka kamera 📸</button>
+      <button class="dark" onclick="closeSurprise()">Nanti dulu</button>
+    </div>
+    <div class="cam-buttons" id="captureButtons" style="display:none">
+      <button class="pink" onclick="takePhoto()">Ambil foto 💗</button>
+      <button class="dark" onclick="closeSurprise()">Tutup</button>
+    </div>
+    <div id="result" style="display:none">
+      <div class="result-title">KAMU CANTIK BANGET! 🥹💗</div>
+      <p class="result-copy">Iya, ayang. Kamu cantik banget—bukan cuma di foto ini, tapi juga dari cara kamu jadi diri sendiri. Semoga kamu selalu melihat dirimu dengan lembut, karena kamu pantas merasa dicintai, dihargai, dan bahagia. Jangan lupa senyum ya, cantiknya Yoss. 💞<br><strong>Love you, ayangku!</strong></p>
+      <div class="cam-buttons">
+        <button class="white" onclick="savePhoto()">Simpan foto ⬇️</button>
+        <button class="pink" onclick="shareWhatsApp()">Bagikan ke WhatsApp 💬</button>
+        <button class="dark" onclick="retake()">Foto lagi</button>
+        <button class="dark" onclick="closeSurprise()">Selesai ✨</button>
+      </div>
+      <p class="small">Foto diproses di browser ini. Berbagi ke WhatsApp akan membuka aplikasi dengan pesan siap kirim; ayang tetap menekan tombol kirim sendiri.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+const pairs = [
+ {q:"Kalau punya waktu berdua…",a:"🌙 Teleponan sampai ketiduran",b:"☀️ Jalan-jalan cari jajan"},
+ {q:"Tanggal yang paling manis…",a:"💌 Dapat surat panjang",b:"🎁 Dapat kejutan kecil"},
+ {q:"Cara dimanjain favorit ayang…",a:"🫂 Dipeluk lama",b:"🍜 Ditraktir makanan enak"},
+ {q:"Kencan impian…",a:"🎬 Nonton sambil ngemil",b:"🌅 Lihat senja berdua"}
+];
+const picks={};
+document.getElementById("choiceList").innerHTML=pairs.map((p,i)=>`<div style="margin-top:17px"><strong>${i+1}. ${p.q}</strong><div class="choices"><button class="choice" data-i="${i}" data-v="a" onclick="pick(${i},'a')">${p.a}</button><button class="choice" data-i="${i}" data-v="b" onclick="pick(${i},'b')">${p.b}</button></div></div>`).join("");
+function pick(i,v){picks[i]=v;document.querySelectorAll(`[data-i="${i}"]`).forEach(b=>b.classList.toggle("selected",b.dataset.v===v));let count=Object.keys(picks).length;let lines=pairs.map((p,i)=>picks[i]===undefined?null:`• ${p.q} ${p[picks[i]]}`).filter(Boolean);document.getElementById("choiceSummary").innerHTML=count<pairs.length?`Sudah pilih ${count} dari ${pairs.length}. Lanjut, ayang! 💕<br>${lines.join("<br>")}`:`Pilihan ayang sudah lengkap! 💗<br>${lines.join("<br>")}<br><strong>Catatan Yoss:</strong> apa pun pilihan ayang, yang penting kita bisa bikin kenangan manis bareng.`;
+}
+function answer(n,ok){document.getElementById("f"+n).textContent=ok?"Benarrr! 💗 Yoss kasih ayang 1000 poin bucin!":"Hehe, belum tepat, ayang 😚 Coba pilih lagi!";if(ok)document.getElementById("f"+n).style.color="#bd2e68";}
+let stream=null, photoData=null;
+function startSurprise(){document.getElementById("cameraStage").classList.add("show");document.body.style.overflow="hidden";document.getElementById("cameraTop").textContent="Ssst… ada kejutan buat ayang 🖤";document.getElementById("cameraNote").textContent="Layar dibuat gelap dulu, ya. Untuk mengambil foto, browser akan meminta izin kamera. Kamera hanya aktif setelah ayang menekan tombol dan mengizinkannya.";document.getElementById("videoFrame").style.display="none";document.getElementById("startButtons").style.display="flex";document.getElementById("captureButtons").style.display="none";document.getElementById("result").style.display="none";}
+async function openCamera(){if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){document.getElementById("cameraNote").textContent="Browser ini belum mendukung kamera. Coba buka link website melalui browser HP yang terbaru dan koneksi HTTPS.";return;}try{stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:"user"},audio:false});const v=document.getElementById("video");v.srcObject=stream;await v.play();document.getElementById("videoFrame").style.display="block";document.getElementById("photo").style.display="none";v.style.display="block";document.getElementById("startButtons").style.display="none";document.getElementById("captureButtons").style.display="flex";document.getElementById("cameraTop").textContent="Senyum dulu, ayang! 📸";document.getElementById("cameraNote").textContent="Posisikan wajah di tengah layar, lalu tekan Ambil foto. Foto tetap di perangkat/browser ini sampai ayang memilih menyimpannya atau membagikannya.";}catch(e){document.getElementById("cameraNote").textContent="Kamera belum bisa dibuka. Pastikan izin kamera diberikan dan website dibuka melalui HTTPS. Ayang bisa menutup kejutan ini kapan saja.";}}
+function takePhoto(){const v=document.getElementById("video"),c=document.getElementById("canvas");if(!v.videoWidth){document.getElementById("cameraNote").textContent="Kamera belum siap. Tunggu sebentar lalu coba lagi ya, ayang.";return;}c.width=v.videoWidth;c.height=v.videoHeight;c.getContext("2d").drawImage(v,0,0,c.width,c.height);photoData=c.toDataURL("image/jpeg",.92);stopStream();document.getElementById("video").style.display="none";const img=document.getElementById("photo");img.src=photoData;img.style.display="block";document.getElementById("videoFrame").style.display="block";document.getElementById("captureButtons").style.display="none";document.getElementById("cameraTop").textContent="Satu hal yang harus ayang tahu…";document.getElementById("cameraNote").textContent="";document.getElementById("result").style.display="block";}
+function stopStream(){if(stream){stream.getTracks().forEach(t=>t.stop());stream=null;}document.getElementById("video").srcObject=null;}
+function savePhoto(){if(!photoData)return;const a=document.createElement("a");a.href=photoData;a.download="ayang-cantik-banget-yoss.jpg";document.body.appendChild(a);a.click();a.remove();}
+function shareWhatsApp(){const msg="Hai, Yoss! 💗 Aku sudah ambil foto dan baca pesan manisnya. Katanya aku cantik banget 🥹💕";window.open("https://wa.me/6282170898982?text="+encodeURIComponent(msg),"_blank");}
+function retake(){photoData=null;document.getElementById("result").style.display="none";document.getElementById("videoFrame").style.display="none";document.getElementById("photo").style.display="none";document.getElementById("cameraTop").textContent="Ayo foto lagi, ayang! 📸";document.getElementById("cameraNote").textContent="Tekan tombol untuk membuka kamera lagi.";document.getElementById("startButtons").style.display="flex";document.getElementById("captureButtons").style.display="none";}
+function closeSurprise(){stopStream();document.getElementById("cameraStage").classList.remove("show");document.body.style.overflow="";photoData=null;}
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&document.getElementById("cameraStage").classList.contains("show"))closeSurprise();});
+</script>
+</body>
+</html>
